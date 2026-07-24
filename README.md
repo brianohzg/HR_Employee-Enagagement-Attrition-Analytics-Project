@@ -44,4 +44,9 @@ The business question is thus, “How can the organisation identify flight risk 
 
 ##Dataset
 - Description: Organization HR dataset containing 18,000 employee record (54 Columns). An integrated dataset containing employee demographic, logged survey response and questions across 2024 and 2026, and organization information.
-- 
+- Data Preparation performed in excel:
+  -- Data cleaning of column heterogeneity
+  -- Data anonymization of employee details
+  -- Binning of columns Tenure, Age Group, Performance Rating. 
+  -- Impute missing values with
+  -- New column computation for defined "Critical Talent Leaver"
