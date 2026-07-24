@@ -58,7 +58,7 @@ The business question is thus, “How can the organisation identify flight risk 
 | Identify & validate Engagement Drivers | Conduct exploratory data analysis, hypothesis testing (t-tests, chi-square) and effect size analysis. | Moves te organization form intuition to evidence. |
 | Analyse the Engagement–Attrition Relationship | Link 2024 engagement drivers to actual attrition outcomes (Oct 2024 – Feb 2026) to test whether engagement is a leading indicator of attrition risk. | Validates engagement as a predictive metric, strengthening the case for early intervention. |
 | Develop a predictive Model (decision tree) | Build an interpretable classification model to identify flight-risk employees and extract transparent decision rules. | Enables proactive, individual level retention action while maintaining explainability for HR and leadership. |
-| Segment Employees into Risk Profiles | Cluster employess into actionable groups such as high performer-at-risk, long-tenure-declining, and new-joiner cohorts. | Supports differentiated retention strategies tailored to each segment;s drivers and risk profile. |
+| Segment Employees into Risk Pros | Cluster employess into actionable groups such as high performer-at-risk, long-tenure-declining, and new-joiner cohorts. | Supports differentiated retention strategies tailored to each segment;s drivers and risk pro. |
 | Deliver Dashboard & Actionable Insights | Develop a Power BI dashboard that integrates driver, segment, and risk analyses into interactive decision tool. | Equips HR and leadership with a live, evidence bases platform to guide retention decisions and track progress. |
 
 ## Tools & Methods
@@ -107,13 +107,13 @@ The hypothesis was that vountary leavers had statistically lower engagement than
   <img width="800" height="430" alt="image" src="https://github.com/user-attachments/assets/5e7360e9-1116-4e67-9f61-640d12214607" />
 
 4. **Decision Tree Modeling**
-- File: /Orange_critical talent attrition
+- File: [Orange_Decision Tree_Model.ows](https://github.com/brianohzg/HR_Employee-Enagagement-Attrition-Analytics-Project/blob/main/Orange_Decision%20Tree_Model.ows)
 - A decision tree classifier in Orange was used to predict attrition from 24 engagement drivers. Separate trees were built for the workforce, critical talent, and regions (AEUK, AMECA, ANZ, ASIA) to highlight segment-specific drivers. The interpretable tree was chosen over complex ensembles to provide transparent, HR‑readable decision rules. For simplicity, the focus is on the attrited critical talent segment for modeling. 
   <img width="1100" height="490" alt="image" src="https://github.com/user-attachments/assets/f309097d-bee6-4be4-96d1-5d75b4732e3c" />
   <img width="800" height="390" alt="image" src="https://github.com/user-attachments/assets/517fd2d3-0ea9-4cfc-a168-8f221a93f01e" />
 
 5. **Clustering Analysis**
-- File: /Orange_clustering
+- File: [Orange_Clustering_Model.ows](https://github.com/brianohzg/HR_Employee-Enagagement-Attrition-Analytics-Project/blob/main/Orange_Clustering_Model.ows)
 - A clustering analysis was performed in Orange using engagement, tenure, job grade, performance rating, and demographic attributes as features. Three natural segments emerged. The clusters were profiled by their characteristics and engagement index, and labelled qualitatively as Thriving, Loudly Quitting, and Quietly Quitting.
   <img width="1100" height="420" alt="image" src="https://github.com/user-attachments/assets/58025ab9-43fa-49c1-b437-0cfa90772655" />
   <img width="700" height="420" alt="image" src="https://github.com/user-attachments/assets/78d06dcc-0898-4c0f-bfdf-ea8e23117917" />
@@ -140,7 +140,7 @@ The hypothesis was that vountary leavers had statistically lower engagement than
 
 ## Engagement Driver Dashboard
   **Dashboard**
-  - File: dashboard
+  - File: [People Analytics Dasboard](https://github.com/brianohzg/HR_Employee-Enagagement-Attrition-Analytics-Project/blob/main/Dashboard_People%20Analytics.pbix)
   - The dashboad lists every engagement driver with its corresponding score, the correlation with overall engagement, and a calculated cpriority score that combines the gap-from-target with the correlation strenght such that drivers which are both low-scoring and highly correlated with engagement are ranked highest. This dashboard is catered specifically for HR business partner to support strategic conversations across different organization levels.
     <img width="1125" height="840" alt="image" src="https://github.com/user-attachments/assets/02f00513-45f3-480c-9375-a8f4cca57afb" />
 
