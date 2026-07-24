@@ -128,7 +128,7 @@ The hypothesis was that vountary leavers had statistically lower engagement than
      - The decision-tree segmentation guided the regional and talent-specific strategy. The 2026 Engagement Index appears as the top splitting factor in every segment, followed by Intent to Stay. Beyond these, segment-specific drivers emerge.
    - **Workforce Clustering - Thre Natural Segments**
      - The clustering analysis produced three actionable workforce segments. The segments materially differ on engagement level, performance, and tenure profile, which means each requires a different retention conversation.
-    
+
 2. **Recommended Action Plans**
 
 | Priority | Theme | Interventions |
