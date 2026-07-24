@@ -73,10 +73,10 @@ The hypothesis was that vountary leavers had statistically lower engagement than
 1. **Hypothesis Testing**
    - T-Test (independent two-sample, two tail): Compared mean engaement score for stayers (n=9,086) vs voluntary leavers (n=1,765). Returned with p-value below 0.001.
      <img width="720" height="263" alt="image" src="https://github.com/user-attachments/assets/d13344d2-5f02-415a-84fb-04566558513d" />
-   -Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0001.
+   - Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0001.
      <img width="726" height="138" alt="image" src="https://github.com/user-attachments/assets/baba4f63-a3d7-4921-99ca-34a3a0392565" />
 
-##
+2. 
 
 
 
