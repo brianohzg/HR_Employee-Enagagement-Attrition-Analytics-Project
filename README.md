@@ -47,11 +47,12 @@ The business question is thus, “How can the organisation identify flight risk 
 - **Power BI:** Dashboard creation and visualization, Data modelling (schema)
 - **Orange:** Decision Tree Modeling (Chi-Sqaure test), Cluster Analysis
 - **MS word:** for project report
-- **MS Powerpoint:** for presentation
+- **MS Powerpoint:** for presentation 
 
 ## Dataset
 - **Dataset not shared due to confidentiality**
-- Description: Organization sourced HR dataset containing 18,000 employee record (54 Columns). An integrated dataset containing employee demographic, logged survey response and questions across 2024 and 2026, and organization information.
+- Description: Organization sourced HR dataset containing 18,000 employee record (54 Columns). An integrated dataset containing employee demographic, logged survey response and questions across 2024 and 2026, and
+  organization information.
 - Data Preparation performed in excel:
   - Data cleaning of column heterogeneity
   - Data anonymization of employee details
@@ -67,27 +68,52 @@ The business question is thus, “How can the organisation identify flight risk 
   <img width="1487" height="328" alt="image" src="https://github.com/user-attachments/assets/e951ac16-ccfe-4b3c-91ad-dd749928cb59" />
   <img width="1518" height="232" alt="image" src="https://github.com/user-attachments/assets/654dc2ee-cfdf-42aa-ae4f-e5ed58d48ed1" />
 
-## Analytical Methods and Results
+## Analytical Methods and Steps
 1. **Hypothesis Testing**
 The hypothesis was that vountary leavers had statistically lower engagement than stayers. Two formal test applied to validate this.
 **Result:** Both T-test and Chi-square test rejected both null hypothesis therefore proving that mean score of both cohorts (voluntary & non-voluntary leavers) are equal and attrition outcome is dependant on engagement level.
    - T-Test (independent two-sample, two tail): Compared mean engaement score for stayers (n=9,086) vs voluntary leavers (n=1,765). Returned with p-value below 0.001.
      <img width="720" height="263" alt="image" src="https://github.com/user-attachments/assets/d13344d2-5f02-415a-84fb-04566558513d" />
-   - Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0001.
+   - Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0.001.
      <img width="726" height="138" alt="image" src="https://github.com/user-attachments/assets/baba4f63-a3d7-4921-99ca-34a3a0392565" />
 
 2. **Driver Gap Analysis**
 **Variance Chart in Engagement Score**
-Each of the 24 engagement drivers was scored separately for stayers and voluntary leavers, and the gap between the two scores was computed. Voluntary leavers scored lower on every single driver. Note that binning of 24 drivers was deliberatly avoided to retain driver-level granularity to drive precise diagnosis instead of broad plans.
-<img width="1202" height="697" alt="image" src="https://github.com/user-attachments/assets/231dc8be-53de-4d02-b571-41e5db98a372" />
+- Each of the 24 engagement drivers was scored separately for stayers and voluntary leavers, and the gap between the two scores was computed. Voluntary leavers scored lower on every single driver. Note that binning of 24  drivers was deliberatly avoided to retain driver-level granularity to drive precise diagnosis instead of broad plans.
+  <img width="1202" height="697" alt="image" src="https://github.com/user-attachments/assets/231dc8be-53de-4d02-b571-41e5db98a372" />
+
 **Driver Priorities Scatter**
-This analysis was operationalised through an interactive Power BI dashboard, enabling dynamic exploration of attrition drivers. Each driver was plotted on a scatter chart with the stayer engagement score on the X-axis and the leaver–stayer engagement gap on the Y-axis. This visualisation allowed quick identification where gaps are most pronounced relative to baseline engagement levels (Mean). In particular, the bottom-left quadrant, drivers that score low among stayers and exhibit large negative leaver-vs-stayer gaps, represents the highest leverage area for intervention, where targeted action is most likely to improve engagement and reduce voluntary attrition.
-<img width="1197" height="525" alt="image" src="https://github.com/user-attachments/assets/5e7360e9-1116-4e67-9f61-640d12214607" />
+- This analysis was operationalised through an interactive Power BI dashboard, enabling dynamic exploration of attrition drivers. Each driver was plotted on a scatter chart with the stayer engagement score on the X-axis and the leaver–stayer engagement gap on the Y-axis. This visualisation allowed quick identification where gaps are most pronounced relative to baseline engagement levels (Mean). In particular, the bottom-left quadrant, drivers that score low among stayers and exhibit large negative leaver-vs-stayer gaps, represents the highest leverage area for intervention, where targeted action is most likely to improve engagement and reduce voluntary attrition.
+  <img width="1197" height="525" alt="image" src="https://github.com/user-attachments/assets/5e7360e9-1116-4e67-9f61-640d12214607" />
 
-3. **Decision Tree Modeling**
-File: /Orange
-A decision tree classifier in Orange was used to predict attrition from 24 engagement drivers. Separate trees were built for the workforce, critical talent, and regions (AEUK, AMECA, ANZ, ASIA) to highlight segment-specific drivers. The interpretable tree was chosen over complex ensembles to provide transparent, HR‑readable decision rules. For simplicity, the focus is on the attrited critical talent segment for modeling. 
-<img width="1146" height="540" alt="image" src="https://github.com/user-attachments/assets/517fd2d3-0ea9-4cfc-a168-8f221a93f01e" />
+4. **Decision Tree Modeling**
+- File: /Orange_critical talent attrition
+- A decision tree classifier in Orange was used to predict attrition from 24 engagement drivers. Separate trees were built for the workforce, critical talent, and regions (AEUK, AMECA, ANZ, ASIA) to highlight segment-specific drivers. The interpretable tree was chosen over complex ensembles to provide transparent, HR‑readable decision rules. For simplicity, the focus is on the attrited critical talent segment for modeling. 
+  <img width="1632" height="685" alt="image" src="https://github.com/user-attachments/assets/f309097d-bee6-4be4-96d1-5d75b4732e3c" />
+  <img width="1146" height="540" alt="image" src="https://github.com/user-attachments/assets/517fd2d3-0ea9-4cfc-a168-8f221a93f01e" />
 
+5. **Clustering Analysis**
+- File: /Orange_clustering
+- A clustering analysis was performed in Orange using engagement, tenure, job grade, performance rating, and demographic attributes as features. Three natural segments emerged. The clusters were profiled by their characteristics and engagement index, and labelled qualitatively as Thriving, Loudly Quitting, and Quietly Quitting.
+  <img width="1661" height="558" alt="image" src="https://github.com/user-attachments/assets/58025ab9-43fa-49c1-b437-0cfa90772655" />
+  <img width="860" height="605" alt="image" src="https://github.com/user-attachments/assets/78d06dcc-0898-4c0f-bfdf-ea8e23117917" />
 
+## Results & Recommendations
+1. **Insights**
+   - **Engagement is a Statisically Significaant predictor of voluntary attrition**
+     - Stayers had an Engagement Index of 73 in 2024. Involuntary leavers scored higher at 76. Voluntary leavers scored just 67. That is a 6-point gap below stayers and a 9-point gap below involuntary leavers. The T-test and Chi-Square test (Section 9.1) confirm this is not random variation. Higher engagement is consistently and strongly associated with lower voluntary attrition (p < 0.001 in both tests).
+   - **Top Engagement Drivers Tied to Attrition**
+     - The diverging-bar gap analysis shows that voluntary leavers scored lower than stayers on every one of the 24 engagement drivers. Intent to Stay had the largest gap at 10.5 points but is interpreted as an early-warning signal rather than a causal driver. The next largest gaps are Recognition (-6.9), Company Direction (-5.8), Growth (-5.7), and Well-being (-5.5). Plotted on the scatter chart, the four drivers that fall into the high-impact, low-score quadrant — the prioritisation target — are Recognition, Well-being, Company Direction (with Communication and Transparency), and Growth.
+   - **Demographic Specific Drivers from Decision Trees**
+     - The decision-tree segmentation guided the regional and talent-specific strategy. The 2026 Engagement Index appears as the top splitting factor in every segment, followed by Intent to Stay. Beyond these, segment-specific drivers emerge.
+   - **Workforce Clustering - Thre Natural Segments**
+     - The clustering analysis produced three actionable workforce segments. The segments materially differ on engagement level, performance, and tenure profile, which means each requires a different retention conversation.
+    
+2. **Recommended Action Plans**
 
+| Priority | Theme | Interventions |
+| --- | --- | --- |
+| #1 | Well-being / Belonging | Audit workload distributions to surface chronic over-allocation, Train managers to spot early signs of burnout and disengagement, Establish regular 1:1 check-in as a standard team practice |
+| #2 | Recognition / Belonging | Train managers to recognise meaningfully and equitably, Track milestones and contributions visibly at team level, Schedule regular check-ins focused on appreciation and feedback |
+| #3 | Communication / Directon / Transparency / Prospects / Belonging/ | Increase transparency through leadership townhalls, Share a clear business stratefic roadmap regularly, cascade strategy narratives through people leaders so the mesafe reaches every team | 
+| #4 | Growth / Prospects | Embed structured career conversations with individual development plans | Provide rotation, stretch assignments, and mentoring programmes, Publish transparent, criteria based promotion guidelines |
