@@ -1,6 +1,8 @@
 # HR_Employee-Enagagement-Attrition-Analytics-Project
 A real world analytics project examining a global organization HR data. Utilizing a suite of analytical methods such as descriptive analysis, driver analysis, predictive modelling, segmentation and clustering.
 
+---
+
 ## Disclaimer
 This project was developed using company‑sponsored data as part of an academic module.  
 Due to confidentiality policies, the original dataset cannot be shared publicly.  
@@ -15,6 +17,8 @@ To comply with organizational data governance standards:
 - **Controlled Outputs:** Dashboards, reports, and slides are included with sensitive elements blurred or redacted, ensuring insights are shared responsibly.  
 
 This approach demonstrates the ability to apply analytics methods in a real‑world context while maintaining strict adherence to confidentiality and ethical data handling practices.
+
+---
 
 ## Overview
 This project examines how engagement influences voluntary attrition by analysing two engagement surveys held in two seperate time event. The 2024 survey establishes a baseline engagement attrition relationship, while the 2026 survey reflects the organisation's current state following substantial employee turnover.
@@ -74,7 +78,8 @@ The hypothesis was that vountary leavers had statistically lower engagement than
 **Result:** Both T-test and Chi-square test rejected both null hypothesis therefore proving that mean score of both cohorts (voluntary & non-voluntary leavers) are equal and attrition outcome is dependant on engagement level.
    - T-Test (independent two-sample, two tail): Compared mean engaement score for stayers (n=9,086) vs voluntary leavers (n=1,765). Returned with p-value below 0.001.
      <img width="720" height="263" alt="image" src="https://github.com/user-attachments/assets/d13344d2-5f02-415a-84fb-04566558513d" />
-   - Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0.001.
+
+   - Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0.001.     
      <img width="726" height="138" alt="image" src="https://github.com/user-attachments/assets/baba4f63-a3d7-4921-99ca-34a3a0392565" />
 
 2. **Driver Gap Analysis**
@@ -82,7 +87,7 @@ The hypothesis was that vountary leavers had statistically lower engagement than
 - Each of the 24 engagement drivers was scored separately for stayers and voluntary leavers, and the gap between the two scores was computed. Voluntary leavers scored lower on every single driver. Note that binning of 24  drivers was deliberatly avoided to retain driver-level granularity to drive precise diagnosis instead of broad plans.
   <img width="1202" height="697" alt="image" src="https://github.com/user-attachments/assets/231dc8be-53de-4d02-b571-41e5db98a372" />
 
-**Driver Priorities Scatter**
+3. **Driver Priorities Scatter**
 - This analysis was operationalised through an interactive Power BI dashboard, enabling dynamic exploration of attrition drivers. Each driver was plotted on a scatter chart with the stayer engagement score on the X-axis and the leaver–stayer engagement gap on the Y-axis. This visualisation allowed quick identification where gaps are most pronounced relative to baseline engagement levels (Mean). In particular, the bottom-left quadrant, drivers that score low among stayers and exhibit large negative leaver-vs-stayer gaps, represents the highest leverage area for intervention, where targeted action is most likely to improve engagement and reduce voluntary attrition.
   <img width="1197" height="525" alt="image" src="https://github.com/user-attachments/assets/5e7360e9-1116-4e67-9f61-640d12214607" />
 
@@ -117,3 +122,12 @@ The hypothesis was that vountary leavers had statistically lower engagement than
 | #2 | Recognition / Belonging | Train managers to recognise meaningfully and equitably, Track milestones and contributions visibly at team level, Schedule regular check-ins focused on appreciation and feedback |
 | #3 | Communication / Directon / Transparency / Prospects / Belonging/ | Increase transparency through leadership townhalls, Share a clear business stratefic roadmap regularly, cascade strategy narratives through people leaders so the mesafe reaches every team | 
 | #4 | Growth / Prospects | Embed structured career conversations with individual development plans | Provide rotation, stretch assignments, and mentoring programmes, Publish transparent, criteria based promotion guidelines |
+
+## Engagement Driver Dashboard
+  **Dashboard**
+  - File: dashboard
+  - The dashboad lists every engagement driver with its corresponding score, the correlation with overall engagement, and a calculated cpriority score that combines the gap-from-target with the correlation strenght such that drivers which are both low-scoring and highly correlated with engagement are ranked highest. This dashboard is catered specifically for HR business partner to support strategic conversations across different organization levels.
+    <img width="1125" height="840" alt="image" src="https://github.com/user-attachments/assets/02f00513-45f3-480c-9375-a8f4cca57afb" />
+
+
+  
