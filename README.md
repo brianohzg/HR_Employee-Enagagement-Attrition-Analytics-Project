@@ -31,7 +31,7 @@ The business question is thus, “How can the organisation identify flight risk 
 - Enable proactive identification of flight-risk employees through a predictive framework.
 - Equip HR business partners with interactive dashboards and actionable insights to support decision making.
 
-###Technical Approach & Deliverables
+## Technical Approach & Deliverables
 
 | Objectives | What It Does | Business Value |
 | --- | --- | --- |
@@ -42,11 +42,31 @@ The business question is thus, “How can the organisation identify flight risk 
 | Segment Employees into Risk Profiles | Cluster employess into actionable groups such as high performer-at-risk, long-tenure-declining, and new-joiner cohorts. | Supports differentiated retention strategies tailored to each segment;s drivers and risk profile. |
 | Deliver Dashboard & Actionable Insights | Develop a Power BI dashboard that integrates driver, segment, and risk analyses into interactive decision tool. | Equips HR and leadership with a live, evidence bases platform to guide retention decisions and track progress. |
 
-##Dataset
+## Tools & Methods
+- **Excel:** Data loading, cleaning and EDA
+- **Power BI:** Dashboard creation and visualization, Data modelling (schema)
+- **Orange:** Decision Tree Modeling (Chi-Sqaure test), Cluster Analysis
+- **MS word:** for project report
+- **MS Powerpoint:** for presentation
+
+## Dataset
+- **Dataset not shared due to confidentiality**
 - Description: Organization HR dataset containing 18,000 employee record (54 Columns). An integrated dataset containing employee demographic, logged survey response and questions across 2024 and 2026, and organization information.
 - Data Preparation performed in excel:
-  -- Data cleaning of column heterogeneity
-  -- Data anonymization of employee details
-  -- Binning of columns Tenure, Age Group, Performance Rating. 
-  -- Impute missing values with
-  -- New column computation for defined "Critical Talent Leaver"
+  - Data cleaning of column heterogeneity
+  - Data anonymization of employee details
+  - Binning of columns Tenure, Age Group, Performance Rating 
+  - Impute missing values with median values
+  - New column computation for defined "Critical Talent Leaver"
+- Data Dictionary
+  <img width="1507" height="507" alt="image" src="https://github.com/user-attachments/assets/85888080-f653-47b5-b795-da699c98e7db" />
+  <img width="1625" height="393" alt="image" src="https://github.com/user-attachments/assets/915d14cf-80fc-4df9-bbe6-7f1b7bc77417" />
+  <img width="1602" height="477" alt="image" src="https://github.com/user-attachments/assets/b808cbbb-c5c9-454a-8219-1ef57f53299e" />
+  <img width="1487" height="328" alt="image" src="https://github.com/user-attachments/assets/e951ac16-ccfe-4b3c-91ad-dd749928cb59" />
+  <img width="1518" height="232" alt="image" src="https://github.com/user-attachments/assets/654dc2ee-cfdf-42aa-ae4f-e5ed58d48ed1" />
+- Data normalization performed in Power BI to achieve Third Normal Form (3NF)
+  <img width="2617" height="1379" alt="image" src="https://github.com/user-attachments/assets/8e699ae5-a706-4854-a50c-4bc516d03d88" />
+
+
+
+
