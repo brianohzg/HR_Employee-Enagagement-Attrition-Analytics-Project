@@ -100,23 +100,23 @@ The hypothesis was that vountary leavers had statistically lower engagement than
 2. **Driver Gap Analysis**
 **Variance Chart in Engagement Score**
 - Each of the 24 engagement drivers was scored separately for stayers and voluntary leavers, and the gap between the two scores was computed. Voluntary leavers scored lower on every single driver. Note that binning of 24  drivers was deliberatly avoided to retain driver-level granularity to drive precise diagnosis instead of broad plans.
-- <img width="700" height="370" alt="image" src="https://github.com/user-attachments/assets/231dc8be-53de-4d02-b571-41e5db98a372" />
+  <img width="700" height="370" alt="image" src="https://github.com/user-attachments/assets/231dc8be-53de-4d02-b571-41e5db98a372" />
 
 3. **Driver Priorities Scatter**
 - This analysis was operationalised through an interactive Power BI dashboard, enabling dynamic exploration of attrition drivers. Each driver was plotted on a scatter chart with the stayer engagement score on the X-axis and the leaver–stayer engagement gap on the Y-axis. This visualisation allowed quick identification where gaps are most pronounced relative to baseline engagement levels (Mean). In particular, the bottom-left quadrant, drivers that score low among stayers and exhibit large negative leaver-vs-stayer gaps, represents the highest leverage area for intervention, where targeted action is most likely to improve engagement and reduce voluntary attrition.
-  <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/5e7360e9-1116-4e67-9f61-640d12214607" />
+  <img width="800" height="430" alt="image" src="https://github.com/user-attachments/assets/5e7360e9-1116-4e67-9f61-640d12214607" />
 
 4. **Decision Tree Modeling**
 - File: /Orange_critical talent attrition
 - A decision tree classifier in Orange was used to predict attrition from 24 engagement drivers. Separate trees were built for the workforce, critical talent, and regions (AEUK, AMECA, ANZ, ASIA) to highlight segment-specific drivers. The interpretable tree was chosen over complex ensembles to provide transparent, HR‑readable decision rules. For simplicity, the focus is on the attrited critical talent segment for modeling. 
-  <img width="1632" height="685" alt="image" src="https://github.com/user-attachments/assets/f309097d-bee6-4be4-96d1-5d75b4732e3c" />
-  <img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/517fd2d3-0ea9-4cfc-a168-8f221a93f01e" />
+  <img width="1100" height="490" alt="image" src="https://github.com/user-attachments/assets/f309097d-bee6-4be4-96d1-5d75b4732e3c" />
+  <img width="800" height="390" alt="image" src="https://github.com/user-attachments/assets/517fd2d3-0ea9-4cfc-a168-8f221a93f01e" />
 
 5. **Clustering Analysis**
 - File: /Orange_clustering
 - A clustering analysis was performed in Orange using engagement, tenure, job grade, performance rating, and demographic attributes as features. Three natural segments emerged. The clusters were profiled by their characteristics and engagement index, and labelled qualitatively as Thriving, Loudly Quitting, and Quietly Quitting.
-  <img width="1661" height="558" alt="image" src="https://github.com/user-attachments/assets/58025ab9-43fa-49c1-b437-0cfa90772655" />
-  <img width="860" height="605" alt="image" src="https://github.com/user-attachments/assets/78d06dcc-0898-4c0f-bfdf-ea8e23117917" />
+  <img width="1100" height="420" alt="image" src="https://github.com/user-attachments/assets/58025ab9-43fa-49c1-b437-0cfa90772655" />
+  <img width="700" height="420" alt="image" src="https://github.com/user-attachments/assets/78d06dcc-0898-4c0f-bfdf-ea8e23117917" />
 
 ## Results & Recommendations
 1. **Insights**
