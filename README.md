@@ -19,6 +19,21 @@ To comply with organizational data governance standards:
 This approach demonstrates the ability to apply analytics methods in a real‑world context while maintaining strict adherence to confidentiality and ethical data handling practices.
 
 ---
+## Competency Showcase
+This project demonstrated:
+- **Technical Skills:** Business Statistics, Machine Learning (Decision Tree), Clustering, Data Management, Data Modeling
+- **Tools:** Excel, Power BI, Orange, PowerPoint
+- **Business Impact:** Industry Insight and organizational recommendation generation, Data storytelling
+- ## Note
+  Due to simplicity, this README file does not highlight the full exhaustive materials, steps and documents listed in the actual project. Other items, work, skills and topics covered are:
+  -    Gantt and Burndown Chart
+  -    Work Breakdown Sheet
+  -    Project Powerpoint storytelling slides
+  -    Full Project Report
+  -    Stakeholder Analysis and Requirement Envisiong
+  -    Data Risk Register
+
+---
 
 ## Overview
 This project examines how engagement influences voluntary attrition by analysing two engagement surveys held in two seperate time event. The 2024 survey establishes a baseline engagement attrition relationship, while the 2026 survey reflects the organisation's current state following substantial employee turnover.
@@ -129,5 +144,12 @@ The hypothesis was that vountary leavers had statistically lower engagement than
   - The dashboad lists every engagement driver with its corresponding score, the correlation with overall engagement, and a calculated cpriority score that combines the gap-from-target with the correlation strenght such that drivers which are both low-scoring and highly correlated with engagement are ranked highest. This dashboard is catered specifically for HR business partner to support strategic conversations across different organization levels.
     <img width="1125" height="840" alt="image" src="https://github.com/user-attachments/assets/02f00513-45f3-480c-9375-a8f4cca57afb" />
 
+## Limitations
+  Several limitations and challenges should be knowledged when interpreting the findings.
+  - Different survey structures between both years.
+  - Low 2026 resonse rate.
+  - Correlation does not imply causation.
+  - Attrition events occurred before survey conducted.
 
-  
+---
+
