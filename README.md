@@ -68,15 +68,26 @@ The business question is thus, “How can the organisation identify flight risk 
   <img width="1518" height="232" alt="image" src="https://github.com/user-attachments/assets/654dc2ee-cfdf-42aa-ae4f-e5ed58d48ed1" />
 
 ## Analytical Methods and Results
+1. **Hypothesis Testing**
 The hypothesis was that vountary leavers had statistically lower engagement than stayers. Two formal test applied to validate this.
 **Result:** Both T-test and Chi-square test rejected both null hypothesis therefore proving that mean score of both cohorts (voluntary & non-voluntary leavers) are equal and attrition outcome is dependant on engagement level.
-1. **Hypothesis Testing**
    - T-Test (independent two-sample, two tail): Compared mean engaement score for stayers (n=9,086) vs voluntary leavers (n=1,765). Returned with p-value below 0.001.
      <img width="720" height="263" alt="image" src="https://github.com/user-attachments/assets/d13344d2-5f02-415a-84fb-04566558513d" />
    - Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0001.
      <img width="726" height="138" alt="image" src="https://github.com/user-attachments/assets/baba4f63-a3d7-4921-99ca-34a3a0392565" />
 
-2. 
+2. **Driver Gap Analysis**
+**Variance Chart in Engagement Score**
+Each of the 24 engagement drivers was scored separately for stayers and voluntary leavers, and the gap between the two scores was computed. Voluntary leavers scored lower on every single driver. Note that binning of 24 drivers was deliberatly avoided to retain driver-level granularity to drive precise diagnosis instead of broad plans.
+<img width="1202" height="697" alt="image" src="https://github.com/user-attachments/assets/231dc8be-53de-4d02-b571-41e5db98a372" />
+**Driver Priorities Scatter**
+This analysis was operationalised through an interactive Power BI dashboard, enabling dynamic exploration of attrition drivers. Each driver was plotted on a scatter chart with the stayer engagement score on the X-axis and the leaver–stayer engagement gap on the Y-axis. This visualisation allowed quick identification where gaps are most pronounced relative to baseline engagement levels (Mean). In particular, the bottom-left quadrant, drivers that score low among stayers and exhibit large negative leaver-vs-stayer gaps, represents the highest leverage area for intervention, where targeted action is most likely to improve engagement and reduce voluntary attrition.
+<img width="1197" height="525" alt="image" src="https://github.com/user-attachments/assets/5e7360e9-1116-4e67-9f61-640d12214607" />
+
+3. **Decision Tree Modeling**
+File: /Orange
+A decision tree classifier in Orange was used to predict attrition from 24 engagement drivers. Separate trees were built for the workforce, critical talent, and regions (AEUK, AMECA, ANZ, ASIA) to highlight segment-specific drivers. The interpretable tree was chosen over complex ensembles to provide transparent, HR‑readable decision rules. For simplicity, the focus is on the attrited critical talent segment for modeling. 
+<img width="1146" height="540" alt="image" src="https://github.com/user-attachments/assets/517fd2d3-0ea9-4cfc-a168-8f221a93f01e" />
 
 
 
