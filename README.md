@@ -51,22 +51,32 @@ The business question is thus, “How can the organisation identify flight risk 
 
 ## Dataset
 - **Dataset not shared due to confidentiality**
-- Description: Organization HR dataset containing 18,000 employee record (54 Columns). An integrated dataset containing employee demographic, logged survey response and questions across 2024 and 2026, and organization information.
+- Description: Organization sourced HR dataset containing 18,000 employee record (54 Columns). An integrated dataset containing employee demographic, logged survey response and questions across 2024 and 2026, and organization information.
 - Data Preparation performed in excel:
   - Data cleaning of column heterogeneity
   - Data anonymization of employee details
   - Binning of columns Tenure, Age Group, Performance Rating 
   - Impute missing values with median values
   - New column computation for defined "Critical Talent Leaver"
+- Data Transformation: normalization performed in Power BI to achieve Third Normal Form (3NF)
+  <img width="2617" height="1379" alt="image" src="https://github.com/user-attachments/assets/8e699ae5-a706-4854-a50c-4bc516d03d88" />
 - Data Dictionary
   <img width="1507" height="507" alt="image" src="https://github.com/user-attachments/assets/85888080-f653-47b5-b795-da699c98e7db" />
   <img width="1625" height="393" alt="image" src="https://github.com/user-attachments/assets/915d14cf-80fc-4df9-bbe6-7f1b7bc77417" />
   <img width="1602" height="477" alt="image" src="https://github.com/user-attachments/assets/b808cbbb-c5c9-454a-8219-1ef57f53299e" />
   <img width="1487" height="328" alt="image" src="https://github.com/user-attachments/assets/e951ac16-ccfe-4b3c-91ad-dd749928cb59" />
   <img width="1518" height="232" alt="image" src="https://github.com/user-attachments/assets/654dc2ee-cfdf-42aa-ae4f-e5ed58d48ed1" />
-- Data normalization performed in Power BI to achieve Third Normal Form (3NF)
-  <img width="2617" height="1379" alt="image" src="https://github.com/user-attachments/assets/8e699ae5-a706-4854-a50c-4bc516d03d88" />
 
+## Analytical Methods and Results
+The hypothesis was that vountary leavers had statistically lower engagement than stayers. Two formal test applied to validate this.
+**Result:** Both T-test and Chi-square test rejected both null hypothesis therefore proving that mean score of both cohorts (voluntary & non-voluntary leavers) are equal and attrition outcome is dependant on engagement level.
+1. **Hypothesis Testing**
+   - T-Test (independent two-sample, two tail): Compared mean engaement score for stayers (n=9,086) vs voluntary leavers (n=1,765). Returned with p-value below 0.001.
+     <img width="720" height="263" alt="image" src="https://github.com/user-attachments/assets/d13344d2-5f02-415a-84fb-04566558513d" />
+   -Chi-Square Test of Independence: Tested whether engagement level is independent of attrition outcome. Returned with p-value below 0001.
+     <img width="726" height="138" alt="image" src="https://github.com/user-attachments/assets/baba4f63-a3d7-4921-99ca-34a3a0392565" />
+
+##
 
 
 
